@@ -1,0 +1,534 @@
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+html {
+  font-size: 10px;
+  font-family: "Open Sans", sans-serif;
+}
+body {
+  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif;
+}
+.main-content {
+  width: 81.25%;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+}
+/* Header */
+.header {
+  padding-top: 54px;
+  padding-bottom: 54px;
+  background: #fff;
+}
+.main__header {
+  display: flex;
+  align-items: center;
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+}
+.header__logo--name {
+  margin-left: 6.95px;
+}
+.navigation__list {
+  display: flex;
+  margin-left: 70.32px;
+}
+.navigation__list-item + .navigation__list-item {
+  margin-left: 47px;
+}
+.navigation__list-item {
+  transition: color 0.5s;
+}
+
+.navigation-link {
+  position: relative;
+  color: #696d76;
+  text-align: center;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 175% */
+}
+.navigation-link::after {
+  display: none;
+  position: absolute;
+  bottom: -4x;
+  right: 0;
+  content: "";
+  width: 100%;
+  height: 2px;
+  border-radius: 4px;
+  background: rgb(132, 35, 129, 0.8);
+}
+.navigation__list-item:hover:not(:first-of-type) .navigation-link::after {
+  display: block;
+}
+.navigation__list-item:hover .navigation-link {
+  color: #333;
+  font-weight: 600;
+}
+.navigation-home {
+  position: relative;
+}
+.navigation-home .navigation-link {
+  color: #212832;
+  text-align: center;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px; /* 175% */
+}
+.navigation-home::after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  content: "";
+  width: 100%;
+  height: 1px;
+  border-radius: 4px;
+  background: rgb(132, 35, 129, 0.8);
+}
+.action__header {
+  margin-left: auto;
+}
+.action__header--Log {
+  background: transparent;
+  border: none;
+}
+.action__header--Log span {
+  display: inline-block;
+  color: #212832;
+  text-align: center;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px; /* 175% */
+}
+.action__header--Sign {
+  transition: opacity 0.5s;
+  cursor: pointer;
+  width: 113px;
+  height: 52px;
+  margin-left: 56px;
+  border-radius: 6px;
+  background: #212832;
+}
+.action__header--Sign span {
+  display: inline-block;
+  color: #fff;
+  text-align: center;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px; /* 175% */
+}
+.action__header--Sign:hover {
+  opacity: 0.6;
+}
+/* Hero */
+.hero {
+  padding-top: 34px;
+  padding-bottom: 160px;
+}
+.main__hero {
+  display: flex;
+}
+.main__hero--info {
+  width: 46.15%;
+}
+.main__hero--banking {
+  flex: 1;
+}
+.main__hero-intro {
+  position: relative;
+  margin-left: 30px;
+  margin-top: 57px;
+  margin-bottom: 12px;
+  color: #696d77;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 175% */
+}
+.main__hero-intro::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: -30px;
+  width: 18px;
+  height: 2px;
+  background: #696d77;
+}
+.main__hero-title {
+  width: 500px;
+  margin-bottom: 20px;
+  color: #212832;
+  font-family: Open Sans;
+  font-size: 6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 70px; /* 116.667% */
+}
+.hight-light {
+  color: #7264d6;
+  font-size: 6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 70px;
+}
+.main__hero--decs {
+  width: 540px;
+  margin-bottom: 40px;
+  color: #696d76;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px; /* 166.667% */
+}
+.hero__form--input {
+  outline: none;
+  border: none;
+}
+.hero__form--input::placeholder {
+  color: #696d76;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 175% */
+}
+.hero__form--error {
+  display: none;
+  margin-left: 10px;
+  margin-top: 15px;
+  color: rgb(225, 30, 30);
+  font-size: 1.4rem;
+  font-weight: 500;
+  filter: drop-shadow(0 1px 1px rgb(0 0 0 / 0.05));
+}
+.main__hero--form:has(input:invalid:not(:placeholder-shown))
+  .hero__form--error {
+  display: block;
+}
+
+.main__hero--form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  background: #fff;
+  width: 540px;
+  max-width: 100%;
+  height: 74px;
+  padding: 23px 373px 23px 23px;
+  box-shadow: 0px 16px 42px 0px rgba(0, 0, 0, 0.07);
+}
+.hero__form--btn {
+  cursor: pointer;
+  transition: opacity 0.5s;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 149px;
+  height: 58px;
+  border-radius: 8px;
+  border: none;
+  background: #7264d6;
+}
+.hero__form--btn:hover {
+  opacity: 0.9;
+}
+.hero__form--btn span {
+  color: #fff;
+  text-align: center;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px; /* 175% */
+}
+.main__hero--note {
+  display: block;
+  margin-top: 20px;
+  color: #696d76;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 171.429% */
+}
+/* Css Mobile Baking */
+.main__hero--phone {
+  position: relative;
+  z-index: 1;
+  width: 296px;
+  height: 562px;
+  margin-left: 160px;
+  border-radius: 40px;
+  border: 12px solid #212832;
+  background: #fff;
+}
+.main__hero--extra-interest {
+  position: absolute;
+  top: 135px;
+  right: -185px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background-color: #da6464;
+  fill: #da6464;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.main__hero--extra-interest strong {
+  display: inline-block;
+  margin-bottom: -12px;
+  color: #fff;
+  text-align: center;
+  font-size: 4.4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.main__hero--extra-interest p {
+  color: #fff;
+  text-align: center;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.main__hero--camera {
+  /* position: absolute;
+  top: 0;
+  left: 60px; */
+  margin-left: 64px;
+  margin-bottom: 16px;
+  width: 144px;
+  height: 36px;
+  border-radius: 0px 0px 18px 18px;
+  background: #3c2f60;
+}
+.main__hero--screen {
+  display: flex;
+  flex-direction: column;
+  padding: 0 11.5px;
+}
+.main__hero--card {
+  position: relative;
+  width: 250px;
+  height: 150px;
+  margin-bottom: 24px;
+  border-radius: 20px;
+  background: linear-gradient(76.13deg, #8679e4 11.52%, #7264d6 70.78%);
+}
+.main__hero--extra-1 {
+  position: absolute;
+  bottom: 0;
+  right: 4px;
+}
+.main__hero--extra-2 {
+  position: absolute;
+  rotate: 0deg;
+  top: 2px;
+  left: 11px;
+}
+.main__hero--deposite {
+  position: absolute;
+  top: 40%;
+  left: -50%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  width: 174px;
+  padding: 14px 10px;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.07);
+}
+.main__hero--deposite p {
+  margin-left: 8px;
+  color: #31456a;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 14px; /* 100% */
+}
+.main__hero--deposite span {
+  display: inline-block;
+  margin-left: auto;
+  color: #4ab5e3;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px; /* 100% */
+}
+.main_hero--infoCard {
+  padding: 16px;
+}
+.main__hero--nameBanking {
+  display: flex;
+  justify-content: space-between;
+}
+.main__hero--decsBanking {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.main__hero-groupImg {
+  display: flex;
+}
+.main__hero--circleY {
+  translate: -33%;
+  opacity: 0.9;
+}
+.main__hero--circleO {
+  opacity: 0.9;
+}
+.main__hero--surplus {
+  display: block;
+  margin-bottom: 32px;
+  color: #fff;
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.main__hero--informationCard {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  margin-bottom: 5px;
+}
+.main__hero--informationCard p {
+  color: #fff;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.main__hero--informationCard p + p {
+  margin-left: 12px;
+}
+.main_hero--dateRange {
+  position: relative;
+  z-index: 1;
+  display: flex;
+}
+.main_hero--dateRange p {
+  color: #fff;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.main_hero--dateRange p + p {
+  margin-left: 36px;
+}
+.main__hero-listBanking {
+  position: relative;
+}
+.main__hero-extra-secured {
+  position: absolute;
+  right: -92px;
+  bottom: 25px;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  width: 124px;
+  padding: 20px 15px 21px 14px;
+  border-radius: 10px;
+  background: #439f90;
+}
+.main__hero--extra-info {
+  margin-left: 11px;
+}
+.main__hero--extra-info strong {
+  color: #fff;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 14px; /* 100% */
+}
+.main__hero--extra-info span {
+  color: #fff;
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 8px; /* 100% */
+}
+.main__hero--transection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+.main__hero--transection p {
+  color: #31456a;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.main_hero--Item_history_Banking {
+  display: flex;
+  cursor: pointer;
+  transition: box-shadow 0.5s;
+  padding: 14px 10px;
+  border-radius: 12px;
+  margin: 0px -5px;
+}
+.main_hero--Item_history_Banking:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.main__hero--activeName {
+  display: flex;
+}
+.main__hero--date_mailBanking {
+  display: flex;
+}
+.main__hero--ImgBanking {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+}
+.main__hero--activeBanking {
+  display: flex;
+  flex: 1;
+  row-gap: 6px;
+  flex-direction: column;
+  margin-left: 14px;
+}
+.main__hero--activeName {
+  display: flex;
+  justify-content: space-between;
+}
+.main__hero--activeName p {
+  color: #212832;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 14px; /* 100% */
+}
+.main__hero--date_mailBanking {
+  display: flex;
+  justify-content: space-between;
+}
+.main__hero--date_mailBanking p {
+  color: #696d76;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 10px; /* 100% */
+}
