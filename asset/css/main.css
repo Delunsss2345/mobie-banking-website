@@ -17,6 +17,29 @@ body {
 a {
   text-decoration: none;
 }
+:root {
+  --Inter: "Inter", sans-serif;
+}
+.intro {
+  position: relative;
+  margin-left: 30px;
+  margin-top: 57px;
+  margin-bottom: 12px;
+  color: #696d77;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 175% */
+}
+.intro::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: -30px;
+  width: 18px;
+  height: 2px;
+  background: #696d77;
+}
 /* Header */
 .header {
   padding-top: 54px;
@@ -143,26 +166,6 @@ a {
 }
 .main__hero--banking {
   flex: 1;
-}
-.main__hero-intro {
-  position: relative;
-  margin-left: 30px;
-  margin-top: 57px;
-  margin-bottom: 12px;
-  color: #696d77;
-  font-size: 1.6rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 28px; /* 175% */
-}
-.main__hero-intro::before {
-  position: absolute;
-  content: "";
-  top: 50%;
-  left: -30px;
-  width: 18px;
-  height: 2px;
-  background: #696d77;
 }
 .main__hero-title {
   width: 500px;
@@ -531,4 +534,266 @@ a {
   font-style: normal;
   font-weight: 400;
   line-height: 10px; /* 100% */
+}
+/* Works */
+.works {
+  padding-bottom: 160px;
+}
+.main__works {
+  display: flex;
+  justify-content: space-between;
+}
+.main__works--img {
+  position: relative;
+  width: 39%;
+}
+.main__works--logoExtra {
+  position: absolute;
+  top: 85px;
+  right: 55px;
+}
+.main__works--logoExtra img {
+  width: 64px;
+  height: 64px;
+}
+.main__works--extraBlock {
+  position: absolute;
+  bottom: 100px;
+  right: -120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 226px;
+  height: 70px;
+  border-radius: 8px;
+  background: #fffdfa;
+  box-shadow: 0px 14px 34px 0px rgba(0, 0, 0, 0.07);
+}
+.main__works--extra-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+.main__works--extra-info strong {
+  display: inline-block;
+  margin-bottom: 5px;
+  color: #212832;
+  font-family: var(--Inter);
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.main__works--extra-info span {
+  color: #696d76;
+  font-family: var(--Inter);
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.main__works--info {
+  flex: 1;
+  margin-left: 230px;
+}
+.main__works--img,
+.main__works--img .main__works--img-main {
+  width: 456px;
+  height: 619px;
+}
+.main__works--title {
+  width: 294px;
+  margin-bottom: 70px;
+  color: #212832;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 50px; /* 125% */
+}
+.main__works--item-child {
+  width: 470px;
+  margin-bottom: 16px;
+  color: #212832;
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px; /* 145.455% */
+}
+.works--item-child-decs {
+  width: 470px;
+  color: #696d76;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 175% */
+}
+.main__works--item + .main__works--item {
+  margin-top: 28px;
+}
+/* Features */
+.main__features {
+  display: flex;
+}
+.main__features--info {
+  width: 40.17%;
+}
+.main__features--title {
+  margin-bottom: 20px;
+  color: #212832;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 50px; /* 125% */
+}
+.main__features--decs {
+  width: 470px;
+  margin-bottom: 28px;
+  color: #696d76;
+  font-family: Open Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px; /* 166.667% */
+}
+.main__features--item {
+  position: relative;
+  margin-left: 24px;
+  color: #212832;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px; /* 166.667% */
+}
+.main__features--item::before {
+  position: absolute;
+  top: 9px;
+  left: -24px;
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #7264d6;
+}
+.main__features--item + .main__features--item {
+  margin-top: 18px;
+}
+.main__features--btn {
+  display: flex;
+  cursor: pointer;
+  margin-top: 53px;
+  justify-content: center;
+  align-items: center;
+  width: 149px;
+  height: 58px;
+  border-radius: 8px;
+  background: #212832;
+  transition: opacity 0.5s;
+}
+.main__features--btn:hover {
+  opacity: 0.7;
+}
+.main__features--btn span {
+  color: #fff;
+  text-align: center;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px; /* 175% */
+}
+.main__features--right {
+  flex: 1;
+}
+.main__features--card {
+  position: relative;
+  width: 482px;
+  height: 322px;
+  margin-top: 70px;
+  margin-left: 130px;
+  border-radius: 20px;
+  background: #8476e3;
+}
+.main__features--extra-1 {
+  position: absolute;
+  top: 0;
+  left: 4px;
+}
+.main__features--extra-2 {
+  position: absolute;
+  bottom: 0;
+  right: 1px;
+}
+.main__features .intro {
+  margin-top: 0;
+}
+.main__features--infoCard {
+  padding: 38px;
+}
+.main__features--nameBanking {
+  display: flex;
+  justify-content: space-between;
+}
+.main__features--decsBanking {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.main__features-groupImg {
+  display: flex;
+}
+.main__features--circleO {
+  margin-right: -50px;
+}
+.main__features--circleO,
+.main__features--circleY,
+.main__features--circleO img,
+.main__features--circleY img {
+  width: 80px;
+  height: 48px;
+  opacity: 0.8;
+}
+.main__features--surplus {
+  position: relative;
+  display: block;
+  margin-bottom: 98px;
+  z-index: 1;
+  color: #fff;
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.main__features--informationCard {
+  
+  display: flex;
+  margin-bottom: 4px;
+}
+.main__features--informationCard p {
+  color: #fff;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.main__features--informationCard p + p {
+  margin-left: 26px;
+}
+.main__features--dateRange  {
+  position: relative;
+  z-index: 1;
+  display: flex;
+}
+.main__features--dateRange p  {
+  color: #fff;
+  font-family: Open Sans;
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.main__features--dateRange p + p {
+  margin-left: 81px;
 }
